@@ -1,0 +1,188 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1b0f34; /* Dark background */
+        }
+
+        /* Navbar container */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #1b0f34;
+            border-bottom: 1px solid #2c1a55;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo .wave {
+            background: linear-gradient(90deg, #ff00ff, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navbar links */
+        ul.nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+         ul.nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        ul.nav-links li a:hover {
+            color: #ff00ff;
+        }
+
+        /* Subscribe button */
+        .subscribe-btn {
+            padding: 8px 20px;
+            background: linear-gradient(90deg, #ff00ff, #ff9900);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+        .subscribe-btn:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:576px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            ul.nav-links {
+                gap: 15px;
+            }
+        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.techwave-hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2b004f, #0b0016);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Center content */
+.hero-center {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient circle */
+.circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd000, #ff2bdc, #6a00ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 45px rgba(255, 0, 255, 0.45);
+  margin: auto;
+}
+
+.circle img {
+  width: 75px;
+}
+
+/* NEW badge */
+.new-badge {
+  position: relative;
+  top: 15px;
+  right: -40px;
+  background: #00ffb2;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Text */
+.techwave-hero h1 {
+  font-size: 3.2rem;
+  margin-top: 25px;
+}
+
+.techwave-hero p {
+  max-width: 520px;
+  margin: 15px auto 35px;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.spotify {
+  background: linear-gradient(135deg, #ffd000, #ff2bdc);
+  color: #000;
+}
+
+.subscribe {
+  border: 1px solid #00ffb2;
+  color: #00ffb2;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Sound waves */
+.wave {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-image:url("assets/hero-bg.png")
+  opacity: 0.9;
+}
+
+.wave.left {
+  left: 0;
+}
+
+.wave.right {
+  right: 0;
+}
