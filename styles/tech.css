@@ -6,7 +6,7 @@
         }
 
         body {
-            background-color: #1b0f34; /* Dark background */
+            background-color: #1d103b; /* Dark background */
         }
 
         /* Navbar container */
@@ -15,10 +15,72 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 50px;
-            background-color: #1b0f34;
+            background-color: #200a4f;
             border-bottom: 1px solid #2c1a55;
         }
         .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo .wave {
+            background: linear-gradient(90deg, #ff00ff, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navbar links */
+        ul.nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+         ul.nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        ul.nav-links li a:hover {
+            color: #ff00ff;
+        }
+
+        /* Subscribe button */
+        .subscribe-btn {
+            padding: 8px 20px;
+            background: linear-gradient(90deg, #ff00ff, #ff9900);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+        .subscribe-btn:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:576px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            ul.nav-links {
+                gap: 15px;
+            }
+        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+ .logo {
             font-size: 24px;
             font-weight: bold;
             color: white;
@@ -81,13 +143,16 @@
 
 .techwave-hero {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #2b004f, #0b0016);
+  background-image: url("../assets/hero-bg.png");
+  background-image: no-repeat;
+  /* background: radial-gradient(circle at top, #2b004f, #0b0016); */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
   color: white;
+  
 }
 
 /* Center content */
@@ -99,38 +164,64 @@
 
 /* Gradient circle */
 .circle {
-  width: 190px;
-  height: 190px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ffd000, #ff2bdc, #6a00ff);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 45px rgba(255, 0, 255, 0.45);
+  position: absolute;
+  bottom:-60px;
+  left:150px;
+  /* box-shadow: 0 0 45px rgba(255, 0, 255, 0.45); */
   margin: auto;
+}
+
+.heading{
+    margin-top: 300px;
+    padding-top: 150px;
 }
 
 .circle img {
   width: 75px;
 }
+.circle {
+  animation:
+    gradientMove 6s ease infinite,
+    pulseScale 3s ease-in-out infinite,
+    floatY 4s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
 
 /* NEW badge */
 .new-badge {
-  position: relative;
-  top: 15px;
-  right: -40px;
+  position:relative;
+  top: -260px;
+  right: -420px;
   background: #00ffb2;
   color: #000;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+  
 }
 
 /* Text */
 .techwave-hero h1 {
   font-size: 3.2rem;
-  margin-top: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .techwave-hero p {
@@ -248,6 +339,7 @@
 }
 .why{
     background-color: #161a3a;
+    padding-bottom: 100px;
 }
 .box{
     
@@ -554,5 +646,73 @@ body {
   background: linear-gradient(135deg, #ffcc00, #ff2bdc);
   transform: translateY(-3px);
 }
+footer {
+    background-image: url("../assets/footer-bg.png");
+  position: relative;
+  background-color: #1a0b38; /* Dark purple base */
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif; /* Clean sans-serif font */
+}
 
+/* Background Wave Effect (assuming your bg image has transparency) */
+footer > img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.3; /* Subtle blending */
+  pointer-events: none;
+}
+
+.head {
+  position: relative;
+  z-index: 2; /* Keeps text above the background waves */
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+  padding-top: 20px;
+}
+
+/* Gradient effect for "Wave" */
+h1 span {
+  background: linear-gradient(90deg, #ff00ff, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Icons Row */
+.footimg {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footimg img {
+  height: 24px; /* Uniform height for social icons */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.footimg img:hover {
+  opacity: 1;
+}
+
+/* Added a class for the copyright text found in your image */
+.copyright {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
 
